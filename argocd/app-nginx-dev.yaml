@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-user/argo-demo.git
+    repoURL: https://github.com/Medaminegdoura/argocd-demo.git
     targetRevision: HEAD
     path: apps/nginx/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-dev
+    namespace: dev
   syncPolicy:
     automated:
       prune: true

@@ -1,3 +1,3 @@
 resources:
   - ../../base
-namespace: nginx-production
+  - namespace.yml

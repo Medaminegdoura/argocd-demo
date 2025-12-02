@@ -5,19 +5,14 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
   source:
-    repoURL: https://github.com/YOUR-USERNAME/argo-demo.git
-    targetRevision: main
+    repoURL: https://github.com/Medaminegdoura/argocd-demo.git
+    targetRevision: HEAD
     path: apps/nginx/overlays/staging
-
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-staging
-
+    namespace: staging
   syncPolicy:
     automated:
-      prune: true       # delete resources no longer in Git
-      selfHeal: true    # fix drift automatically
-    syncOptions:
-      - CreateNamespace=true
+      prune: true
+      selfHeal: true
